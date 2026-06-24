@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 PUBLIC_IP=$(curl -s https://ifconfig.me)
 
 TARGET="www.howtogo.dev"
