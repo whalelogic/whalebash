@@ -1,7 +1,6 @@
 # Bash Types Reference
 
 
-```markdown
 | Type / Attribute | `declare` Flag | How to Create | Behavior & Notes | Example |
 |------------------|----------------|---------------|------------------|---------|
 | **String** (default) | *(none)* | `var="hello"` | Default type for all assignments; everything is a string unless flagged | `name="Alice"` |
@@ -19,4 +18,4 @@
 | **Scalar (untyped)** | *(default)* | Any `var=val` without declare | No special attribute; behaves as string; arithmetic via `$((...))` or `let` | `x=5; echo $((x+1))` |
 | **Null / Unset** | — | `unset var` | Unset variables expand to empty string by default; detectable with `[[ -v var ]]` | `unset myvar; echo ${myvar:-default}` |
 | **Empty String** | — | `var=""` | Variable is set but empty; distinct from unset under `set -u` / `${var:?}` | `var=""; [[ -z $var ]]` → true |
-```
+
