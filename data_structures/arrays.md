@@ -1,7 +1,5 @@
 # Arrays
 
-
-```markdown
 | Operation | Indexed Array | Associative Array |
 |-----------|--------------|-------------------|
 | Declare | `declare -a arr` | `declare -A map` |
@@ -17,4 +15,4 @@
 | Delete element | `unset 'arr[2]'` | `unset 'map[key]'` |
 | Delete all | `unset arr` | `unset map` |
 | Iterate | `for v in "${arr[@]}"` | `for k in "${!map[@]}"` |
-```
+
