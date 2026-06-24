@@ -6,6 +6,9 @@
     "ghcr.io/devcontainers/features/common-utils:2": {
       "configureZshAsDefaultShell": true
     },
+    "ghcr.io/wxw-matt/devcontainer-features/command_runner:0": { "version": "latest" },
+    "ghcr.io/devcontainer-community/devcontainer-features/neovim.io:1": { "version": "latest" },
+    "ghcr.io/devcontainers/features/github-cli:1": { "version": "latest" },
     "ghcr.io/devcontainers/features/go:1": { "version": "latest" },
     "ghcr.io/devcontainers/features/python:1": { "version": "latest", "installTools": true },
     "ghcr.io/devcontainers/features/rust:1": { "version": "latest" },
