@@ -1,6 +1,5 @@
 # Bash Parameters and Expansion
 
-```markdown
 | Syntax | Meaning | Example |
 |--------|---------|---------|
 | `${var:-default}` | Use `default` if unset or empty | `${NAME:-anonymous}` |
@@ -21,4 +20,3 @@
 | `${var:offset:len}` | Substring | `${str:0:5}` |
 | `${!prefix*}` | Variable names matching prefix | `${!BASH*}` |
 | `${!arr[@]}` | Keys/indices of array | `${!mymap[@]}` |
-```
