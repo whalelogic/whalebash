@@ -1,7 +1,5 @@
 # Reference Table
 
-
-
 | Name | Category | Description | Example / Notes |
 |------|----------|-------------|-----------------|
 | `$0` | Special Variable | Name of the script or shell | `echo $0` → `bash` or `./script.sh` |
