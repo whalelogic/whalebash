@@ -1,7 +1,7 @@
 # Bash Syntax Reference
 
 
-```markdown
+
 | Name | Category | Description | Example / Notes |
 |------|----------|-------------|-----------------|
 | `$0` | Special Variable | Name of the script or shell | `echo $0` → `bash` or `./script.sh` |
@@ -134,4 +134,4 @@
 | `select` | Keyword | Interactive menu loop | `select opt in foo bar; do ...; done` |
 | `break` | Built-in | Exit loop | `break 2` breaks 2 levels |
 | `continue` | Built-in | Skip to next loop iteration | `continue 2` skips 2 levels |
-```
+
