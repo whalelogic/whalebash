@@ -23,7 +23,7 @@ fi
 
 # Strip comments and blank lines, then parse key = value lines
 parse_all() {
-    grep -E '^\s*[^#[[:space:]][^=]+=.+' "$TOML_FILE" \
+    grep -E '^\s*[^#[:space:]][^=]+=.+' "$TOML_FILE" \
         | sed 's/[[:space:]]*=[[:space:]]*/=/' \
         | sed 's/^[[:space:]]*//' \
         | sed 's/"//g'

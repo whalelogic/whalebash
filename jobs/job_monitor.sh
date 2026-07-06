@@ -35,7 +35,7 @@ for pid_file in "${PID_DIR}"/*.pid; do
     if kill -0 "$pid" 2>/dev/null; then
         status="running"
     else
-        status="stopped"
+        status="stopped (stale PID file removed)"
         rm -f "$pid_file"
     fi
     printf "%-20s %-8s %s\n" "$job_name" "$pid" "$status"

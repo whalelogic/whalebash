@@ -21,7 +21,7 @@ mem_used=$(( mem_total - mem_available ))
 mem_used_pct=$(( mem_used * 100 / mem_total ))
 swap_used=$(( swap_total - swap_free ))
 
-to_mb() { echo $(( $1 / 1024 )); }
+to_mb() { echo $(( ${1} / 1024 )); }
 
 echo "=== Memory Usage ==="
 printf "%-12s %8s MB\n" "Total:"     "$(to_mb "$mem_total")"
