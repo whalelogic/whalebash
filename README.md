@@ -1,3 +1,70 @@
+# whalebash
+
+A modular bash scripting library. Clone the repo, adjust `config/config.env` for your machine, and run or source any script independently.
+
+## Getting Started
+
+```bash
+git clone https://github.com/whalelogic/whalebash.git
+cd whalebash
+# Edit config/config.env to match your environment
+source config/load_config.sh
+```
+
+## Library Structure
+
+| Directory | Description |
+|-----------|-------------|
+| `config/` | Config file and parsers for env, TOML, JSON, YAML |
+| `io/`     | Input/output utilities (logging, prompts) |
+| `jobs/`   | Background job management |
+| `sys/`    | System info, memory, and disk usage |
+| `updates/`| Package update checker |
+| `file_ops/`| File reading utilities |
+| `net/`    | Network diagnostics |
+
+## Scripts
+
+### config/
+
+| Script | Usage | Description |
+|--------|-------|-------------|
+| `config.env` | edit directly | User-editable environment variables |
+| `load_config.sh` | `source config/load_config.sh [file]` | Sources config.env and creates runtime dirs |
+| `parse_toml.sh` | `./config/parse_toml.sh <file.toml> [key]` | Read values from a TOML file |
+| `parse_json.sh` | `./config/parse_json.sh <file.json> <jq_filter>` | Extract values from JSON using `jq` |
+| `parse_yaml.sh` | `./config/parse_yaml.sh <file.yaml> <key_path>` | Extract values from YAML using `yq` or `python3` |
+
+### io/
+
+| Script | Usage | Description |
+|--------|-------|-------------|
+| `log.sh` | `source io/log.sh` then `log_info "msg"` | Structured logging (DEBUG/INFO/WARN/ERROR) with timestamps |
+| `prompt.sh` | `source io/prompt.sh` then `prompt "msg" "default" varname` | Interactive prompt with default value |
+
+### jobs/
+
+| Script | Usage | Description |
+|--------|-------|-------------|
+| `bg_job.sh` | `./jobs/bg_job.sh <name> <cmd> [args]` | Run a command in the background, save PID |
+| `job_monitor.sh` | `./jobs/job_monitor.sh [--kill <name>]` | List or kill tracked background jobs |
+
+### sys/
+
+| Script | Usage | Description |
+|--------|-------|-------------|
+| `mem_usage.sh` | `./sys/mem_usage.sh` | Memory and swap usage statistics |
+| `disk_usage.sh` | `./sys/disk_usage.sh [mount]` | Disk space per mount point |
+| `sys_info.sh` | `./sys/sys_info.sh` | OS, kernel, CPU, and load summary |
+
+### updates/
+
+| Script | Usage | Description |
+|--------|-------|-------------|
+| `check_updates.sh` | `./updates/check_updates.sh` | Check for available package updates (apt/dnf/pacman) |
+
+---
+
 # Reference Table
 
 | Name | Category | Description | Example / Notes |
